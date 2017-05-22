@@ -1,62 +1,18 @@
 .container
-	&-art,
-	&-blog,
-	&-map-header
-		padding-top 14rem
-
-	&-bottom-sheet
-		bottom -200%
-		// display none
-		left 0
-		padding 0
-		position fixed
-		opacity 0
-		transitionBase()
-		transition-duration 0.6s
-		z-index 16
-		
-		
-		.row
-			box-shadow 0px 0px 10px 0px rgba(0, 0, 0, 0.5)
-			background-color #fff
-			padding 0
-			
-		&.active
-			bottom 0
-			opacity 1
-			
-		
-	&-content-home,
-	&-entry,
-	&-map,
-	&-select-sabor,
-	&-sabor
-		padding 0
-	
-
-	&-fluid
-		width 100%
-		
-	&-header
-		.row
-			padding-left $Gutter
-			padding-right @padding-left
-	&-map
-		background-color lighten($Rojo, 40%)
-		display none
+	&-carousel
 		position relative
+		margin 2rem auto
 
-	&-mapa-home
-		background-color black
-		color #fff
-		padding-bottom 1rem	
-		padding-top @padding-bottom	
+	&-mundos-nestle
+		background-color $Azul[0]
+		box-shadow 0px 0px 10px 10px yellow
+		height 55rem
+		margin 0 auto
+		width 117rem
+		position relative
+		z-index 1
+			
 
-	&-select-sabor
-		padding-top 10.4rem
-	
-	&-sabor
-		overflow hidden
-		&:nth-of-type(1)
-			padding-top 10.4rem
-		
+	&-slider
+		position relative
+		z-index 1

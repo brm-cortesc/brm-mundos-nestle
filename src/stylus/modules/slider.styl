@@ -1,120 +1,76 @@
-.slider
-	&-sabor-mobile,
-	&-producto-pais
+//Carousel//
+.item
+	max-width 6rem
+	
+	img
+		img-responsive(block)
+
+//slider categorias 
+.slide
+	box-shadow 0px 10px 10px 0 rgba(0,0,0,0.25)
+	transitionBase()
+	position relative
+	z-index 1
+	
+	&:hover
+		.slider-hover 
+			opacity 0.99
+			pointer-events all
+			
+	&-categoria
+		background-color $Azul[1]
+		left 1rem
+		position absolute
+		text-transform uppercase
+		top 0
+		max-width 24rem
+		z-index 2
+		padding 1rem
 		text-align center
-		h2, p
-			color #fff !important
-			text-align center
+		
+		h3
+			color #fff
 			
 
-		.producto
-			overflow hidden
-			height 20rem
-			height 42vh
-			max-width 10rem
+
+	&-hover
+		background-color rgba(255,255,255,0.8)
+		opacity 0
+		position absolute
+		text-align center
+		transitionBase()	
+		cuadrado(100%)
+		z-index 6
+		
+		&:hover, &.active
+			opacity 0.99
+			pointer-events all
+			
+	
+	&-intro-txt
+		position absolute
+		right 9rem
+		text-align center
+		top 2.5rem
+		width 30rem
+		z-index 2
+		
+		h2
+			line-height 1
+			text-transform uppercase
+			
+		img
+			img-responsive(block)
 			margin 0 auto
 			
-			img
-				img-responsive()
-				display block
-				margin 0 auto 
-				
-		.slide
-			padding 1rem
-			box-shadow 0px 0px 10px 0px rgba(0, 0, 0, .75)
+		p
+			font-size 1.8rem
+
+	&:hover
+		.slider-hover
+			opacity 0.99
+			pointer-events all
 			
-			transitionBase()
-			&-content
-				margin 0 auto
-				max-width 80%
-				
-			h2
-				font-size 2.5rem
-				margin 1rem auto
-				text-align center
-				// height 4rem
-				
-			p
-				font-size 1.2rem
-				// height 21rem
-				overflow hidden
-				
-			&-text
-				min-height 16rem
-				height 20rem
-				
-	.slick
-		&-active
-			z-index 10
-			
-		&-next,
-		&-prev
-			background none
-			border none
-			color #fff 
-			font-size 0
-			height 3rem
-			overflow hidden
-			position absolute
-			text-align center
-			top 50%
-			width 2.5rem
-			z-index 8
+	.img-slide
+		img-responsive(block)
 		
-			&::before
-				position absolute
-				display block
-				text-align center
-				font-family $Icons
-				cuadrado(100%)
-				centrarAb()
-				font-size 2.5rem
-			&:focus, &:active
-				outline none !important
-				
-		&-next
-			right 0.5rem
-			&::before
-				content '\e080'
-				
-		&-prev
-			left 0.5rem
-			&::before
-				content '\e079'
-				
-	&-sabor-mobile
-		.slide
-			cursor pointer
-			
-	&-producto-pais
-		.slide
-			box-shadow none !important
-			
-			h3
-				opacity 0
-				transitionBase()
-				
-
-			.producto
-				filter blur(5px)
-				height 8.8rem
-				transform scale(0.8)
-				transform-origin center bottom
-				transitionBase()
-			
-		.slick
-			&-active
-				&:nth-of-type(even)
-					box-shadow none !important
-				
-			&-current
-				h3
-					opacity 0.99
-					
-				.producto
-					filter blur(0px)
-					transform scale(1)
-
-			&-next,
-			&-prev
-				color $Rojo

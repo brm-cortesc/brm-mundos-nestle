@@ -23,7 +23,7 @@ head
 		link(rel='stylesheet', href='css/'+name+'.min.css') 
 
 	// Web Fonts
-	link(href='http://fonts.googleapis.com/css?family=Varela+Round|Roboto:400italic,300,700,400' rel='stylesheet' type='text/css')
+	link(href='https://fonts.googleapis.com/css?family=Varela+Round|Roboto:400italic,300,700,400' rel='stylesheet' type='text/css')
 
 	<!--[if lt IE]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -40,6 +40,8 @@ body
 		
 		block content
 
+		include partials/menu
+		
 		include partials/carousel
 	
 	//-Estos son los scripts que van en todos los htmls del desarrollo
@@ -48,6 +50,7 @@ body
 		//-Este arreglo imprime todos los js que se declaren en arreglo jsLibs en gulpfile.js:70
 		-for(x =0; x < libs.length; x++)
 			script(src=libs[x])
+		script(src='js/nestle.mundos.js')
 
 	else
 		script(src='js/libs/jquery.js')

@@ -1,12 +1,23 @@
+*
+	&::selection /* WebKit/Blink Browsers */
+		background darken($Azul[0], 40%)
+		color #fff
+		text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
+
+	&::-moz-selection /* Gecko Browsers */
+		background darken($Azul[0], 40%)
+		color #fff
+		text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
+
 ::-webkit-file-upload-button
 	cursor pointer
 
 a
-	color darken($Rojo, 40%)
+	color $Azul[0]
 	transitionBase()
 
 	&:hover
-		color darken($Rojo, 80%)
+		color darken($Azul[0], 40%)
 		text-decoration underline
 
 	img
@@ -14,26 +25,16 @@ a
 
 body
 	background-color #fff
-	color darken($Rojo, 40%)
+	color $Azul[0]
 	font-family $FontStack
 	font-size 1.4rem
 	font-weight $Light
-	
-	*
-		&::selection /* WebKit/Blink Browsers */
-			background darken($Rojo, 40%)
-			color #fff
-			text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
 
-		&::-moz-selection /* Gecko Browsers */
-			background darken($Rojo, 40%)
-			color #fff
-			text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
 
 
 h1,h2,h3,h4,h5,h6
-	color $Rojo
-	font-family $FontTile
+	color $Azul[0]
+	font-family $FontTitle
 	font-weight $Bold
 	margin 0.5rem auto
 
@@ -55,7 +56,7 @@ textarea,
 		outline none !important
 
 label
-	color $Rojo
+	color $Azul[0]
 	font-weight $Light
 	margin-bottom 0
 
