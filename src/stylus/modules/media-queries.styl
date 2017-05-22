@@ -1,0 +1,653 @@
+@media (min-width:400px)
+	.slider-producto-pais
+		.slide
+			padding 0
+			.producto
+				height 14rem
+
+@media (min-width:430px)
+	header
+		.ornament
+			height 5.5rem
+			right 30%
+			width 11rem
+
+	.col
+		&-logo
+			max-width 13.4rem
+			
+		&-selectores
+			margin-left 20%
+			width 32%
+
+	.container
+		&-art,
+		&-blog,
+		&-map-header,
+		&-sabor:nth-of-type(1)
+			padding-top 15rem
+
+		&-select-sabor
+			padding-top 11.4rem
+	
+	.sabor
+		&-text
+			h3
+				font-size 6rem
+				
+			p
+				font-size 1.6rem
+	
+
+
+@media (min-width:460px)
+	.menu
+		max-width 30rem
+		
+	// .sabor-img
+	// 	img
+	// 		margin 1rem auto
+	// 		max-width 44.2rem
+		
+@media (min-width:540px)
+	.container
+		&-404
+			h1
+				font-size 8rem
+				
+			h2
+				font-size 3rem
+			img
+				display block
+				
+
+			.col-xs-12
+				width 50%
+				
+		
+
+
+@media (min-width:600px)
+	header
+		.ornament
+			height 7.9rem
+			width 16rem
+			
+	.art
+		&-header
+			position relative
+			margin-bottom 3rem
+			
+			h1
+				max-width 60%
+				margin 0
+				padding-top 0
+				position absolute
+				top 50%
+				transform translate3d(0,-50%, 0)
+				left 0
+				z-index 1
+				
+			img
+				max-width 50%
+				margin-left 50%
+	.col
+		&-selectores
+			margin-left 31.5%
+			
+	.container
+		&-404
+			h1
+				font-size 11rem
+				
+			h2
+				max-width 21rem
+				margin 0
+				position relative
+				transform translateY(-2rem)
+				
+			
+	.map-dir
+		.row
+			max-width 90%
+			
+	.sabor
+		&-ornament
+			bottom -15%
+			right -10%
+			width 60%
+	.select-sabor
+		.select-content
+			max-height 90rem
+			
+	.slider
+		.producto
+			height 42rem
+			max-width 20rem
+			
+	.slider-producto-pais
+		.slide
+			padding 0
+			.producto
+				max-width 10rem
+
+	.title-blog
+		font-size 4rem
+			
+@media (min-width: $screen-sm )
+	header
+		&.home
+			background $Rojo
+			padding 1.4rem 0
+			
+			.col
+				&-logo
+					left 50%
+					margin-left 0
+					max-width 28rem
+					position absolute
+					transform translate3d(-50%, 0,0)
+			
+				&-selectores
+					left 75%
+					
+			.lista-paises
+				right 11rem
+
+			.ornament
+				display none
+			
+		.fhome
+			opacity 0
+			pointer-events none
+
+	footer
+		.col-contacto
+			margin-bottom 3rem
+			.btn
+				display: block
+				float right
+				margin-top 1rem
+				max-width 8.3rem
+				
+
+		.logo-colombina
+			left 1rem
+			position absolute
+			top -4.2rem
+			z-index 2
+			
+
+
+	.art
+						
+		&-header
+			h1
+				font-size 4rem
+		&-home
+			.container-hover
+				background-color $Rojo
+				border-radius 100%
+				box-shadow none
+				height 1rem
+				left 50%
+				position absolute
+				top @left
+				transform translate3d(-@left,-@left,0)
+				width 1.5rem
+				opacity 0
+				
+				*
+					opacity 0
+				
+				.btn
+					position absolute
+					left 50%	
+					top @left
+					transform translate3d(-@left, -@left, 0)
+					
+			&:hover
+				.container-hover
+					background-color rgba($Rojo, 0.5)
+					border-radius 0
+					opacity 0.99
+					cuadrado(100%)
+					
+					*
+						opacity 0.99
+
+	.col			
+		&-contacto,
+		&-social
+			display block
+			
+		&-selectores
+			margin-left inherit
+			width inherit
+			
+
+	.container
+		&-404
+			h1				
+				font-size 13rem				
+				
+			h2
+				font-size 4rem
+				max-width 34rem
+				margin 0
+				line-height 1
+				position relative
+				transform translateY(-2rem)
+				
+				span
+					display block
+		&-art
+			padding-bottom 3rem
+		
+		&-map
+			display block
+			
+			img
+				img-responsive()
+			
+		&-map-dir
+			margin-top 2rem
+			
+			h2
+				font-size 8rem
+				margin-left 0
+				max-width 56rem
+
+		&-map-header
+			h1
+				font-size 7rem
+				
+			p
+				font-size 1.8rem
+				
+		&-mapa-home
+			padding-bottom 3rem
+			padding-top @padding-bottom
+		&-sabor
+			left initial
+			overflow visible
+			padding-top 5rem
+			right initial
+			
+			&:nth-of-type(even)
+				.sabor-ornament
+					left 4rem
+			&:nth-of-type(odd)
+				.sabor-ornament
+					right 4rem
+			
+		&-select-sabor
+			.title
+				display block
+				padding-top 14.6rem
+	
+	.entry
+		box-shadow none
+		cursor pointer
+		img
+			max-width none
+			height 34.9rem
+			object-fit cover
+			-webkit-object-fit cover
+			-moz-object-fit cover
+			-ms-object-fit cover
+			-o-object-fit cover
+			width 100%
+
+		.entry-hover
+			background-color $Rojo
+			border-radius 100%
+			box-shadow none
+			height 1rem
+			left 50%
+			position absolute
+			top @left
+			transform translate3d(-@left,-@left,0)
+			width 1.5rem
+			opacity 0
+			
+			*
+				opacity 0
+				// transition-delay 0.3s
+
+			.btn
+				display inline-block
+				margin 0 auto 0.5rem
+				max-width 12.2rem
+				
+				&-view
+					float right
+			
+			.entry
+				&-btn
+					position absolute
+					left 50%	
+					top 50%
+					transform translate3d(-@left, -@left, 0)
+					width 90%
+					
+		&-high
+			max-height  none !important
+			height 70.8rem
+			width 32%
+			
+			img
+				height 70.8rem
+		
+		&-square
+			max-height none !important
+			height 34.9rem
+			width 32%
+		&-wide
+			max-height  none !important
+			height 34.9rem
+			width 65%
+			
+			.entry-hover
+				.entry-btn
+					width 50%
+					
+
+
+		&:hover
+			.entry-hover
+				background-color rgba($Rojo, 0.5)
+				border-radius 0
+				opacity 0.99
+				cuadrado(100%)
+				
+				*
+					opacity 0.99
+	.map
+		&-img
+			display block
+			
+	.map-dir
+		.bs-content-map
+			max-height none
+			overflow visible
+			
+			.title-content
+				font-size 2.5rem
+		.row
+			max-width 80rem
+		
+	
+	.row
+		padding-left $Gutter
+		padding-right @padding-left			
+	
+	.sabor
+		&-img
+			max-width 100%
+			
+		&-ornament
+			bottom -9rem
+			// display none
+			height auto
+			pointer-events none
+			position absolute
+			width 25rem
+		&-text
+			h3
+				margin-left 0
+			
+	.select-sabor
+		h3
+			font-size 6rem
+		.descripcion-sabor
+			display block
+			max-width 80%
+			
+		.select-content
+			max-height 90%
+			top 5%
+			overflow visible
+			
+	.slider
+		.slide
+			box-shadow none
+		
+	.slider-producto-pais
+		.slide
+			padding 0
+			.producto
+				height 27rem
+				max-width 20rem		
+
+
+	.slick-active
+		&:nth-of-type(even)
+			box-shadow 0px -5px 10px 0px rgba(0, 0, 0, .75) !important
+		&:nth-of-type(odd)
+			z-index 11
+
+
+	.title-blog
+		font-size 6rem
+		max-width 52.1rem
+		text-align center
+
+
+@media (min-width: 800px )
+	.col
+		&-selectores
+			left 52.9%
+
+@media (min-width: 900px )
+	header
+		.ornament
+			height 12.4rem
+			width 25rem
+			
+	.art						
+		&-header
+			h1
+				max-width 50%
+			img
+				margin-left 30%
+				max-width 70%
+				
+	.container
+		&-bottom-sheet
+			.bs-header
+				h2
+					font-size 4rem
+					max-width 50%
+				img
+					margin-left 30%
+					max-width 70%
+					
+		&-sabor
+			.row
+				max-width 95rem
+		&-select-sabor
+			.title
+				padding-top 16rem
+				font-size 6rem
+		
+	.list-indicator
+		right 14%
+		
+	.entry
+		.entry-hover
+			.entry-btn
+				width 80%
+				
+		&-wide
+			.entry-hover
+				.entry-btn
+					width 50%
+
+	.sabor
+		&-ornament
+			width 25rem
+			z-index 0
+			
+		&-text
+			h3
+				margin-left 0
+				line-height 0.9
+				width 60%
+	.select
+		&-flavor,
+		&-pais
+			.indicator
+				cuadrado(5rem)
+			.selected
+				circ(4.5rem)
+				
+
+@media (min-width: 1000px )
+	header.home
+		.lista-paises
+			right 6rem
+			
+	.entry
+		.entry-hover
+			.btn
+				display inline-block
+				margin 0
+				vertical-align middle
+				width 45%
+				
+				&-view
+					float right
+
+
+@media (min-width: $screen-lg )
+	.col
+		&-btn
+			display none
+			
+		&-selectores
+			left 62.5%
+			
+	.container
+		&-art
+			.row
+				max-width 88rem
+		&-map-header
+			h1, p
+				max-width 85%
+				margin auto
+				
+			h1
+				margin-bottom 2rem
+				
+
+	
+	.menu
+		background-color transparent
+		border-radius 0
+		box-shadow none
+		left 0
+		max-width 17rem
+		opacity 0.99
+		padding 0
+		top 13rem
+		
+		&::before
+			border-radius 0 5px 5px 0
+			box-shadow 0px 0px 10px 0px rgba(0,0,0,0.5)
+			content ''
+			pointer-events none
+			display block
+			height 100%
+			left 0
+			position absolute
+			top 0
+			width 7.2rem
+			z-index -1
+		
+		li
+			background-color #fff
+			display inline-block
+			max-width 7.2rem
+			overflow hidden
+			position relative
+			z-index 1
+			
+			&:nth-of-type(1)
+				border-radius 0 5px 0 0
+			&:nth-of-type(4)
+				border-radius 0 0 5px 0
+
+			a
+				display block
+				overflow hidden
+				width 100%
+
+				span
+					// margin 0
+					opacity 0
+					overflow hidden
+					padding 0
+					width 100%
+					max-width 0
+					
+			&:hover, &.active
+				border-color transparent
+				border-radius 0 5px 5px 0
+				box-shadow 0px 0px 5px 0px rgba(0, 0, 0, .75)
+				max-width 100%
+				z-index 2
+				
+				span
+					margin-left 1rem
+					opacity 0.99
+					max-width 60%
+					white-space nowrap
+					
+			&.active
+				background-color lighten($Rojo, 40%)
+				color #fff
+				max-width 7.2rem
+				pointer-events none
+				
+				a
+					span
+						opacity 0
+						overflow hidden
+						padding 0
+						width 100%
+						max-width 0
+						
+					
+				i
+					path, circle, polygon
+						fill #fff
+						
+
+	.sabor
+		&-text
+			h3
+				font-size 7rem
+				width 60%
+				
+		&-lulo
+			h3
+				width 40%
+				
+		&-maracuya
+			.sabor-text
+				h3
+					width 80%
+				
+		// &-ornament
+		// 	width 34rem
+@media (min-width: 1280px )
+	.container
+		&-art
+			.row
+				max-width $SiteWidth
+		&-sabor
+			.row
+				max-width $SiteWidth 
+
+@import landscape

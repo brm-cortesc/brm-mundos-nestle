@@ -1,0 +1,332 @@
+//Fix para sacar la posicion correcta del sprite
+mult = 0
+spriteAlto = 1.85% // (100/27)/2 <-- se cuenta la cantidad de colores menos 1
+pos = 0
+
+/*!!
+Clases para generar cada tema del site
+	sabores es el arreglo que esta en variables.styl
+	sabor es el nombre de la clase que se va a generar
+	val es el color hex
+ */
+for sabor, val in sabores
+	
+	body.{sabor}
+		color darken(val, 40%)
+		*
+			&::selection /* WebKit/Blink Browsers */
+				background val
+
+			&::-moz-selection /* Gecko Browsers */
+				background val
+
+		a
+			color darken(val, 40%)
+
+			&:hover
+				color darken(val, 80%)
+		
+		h1,h2,h3,h4,h5,h6
+			color val
+		label
+			color val
+		footer
+			background-color val
+			
+			h3
+				color #fff
+
+			.input
+				input, textarea
+					color #fff
+				label
+					color #fff
+			
+		header
+			background linear-gradient(to bottom, val 18%, lighten(val, 40%) 100%)
+			
+			.ornament
+				background-position center pos
+				
+
+		.art
+			&-header
+				h1
+					color #fff
+					span
+						bgHighlight(val)
+
+						
+			&-content
+				a
+					&::before
+						background-color rgba(val, 0.5)
+						
+				blockquote
+					border-color val
+						
+				ol, ul
+					li
+						&::before
+							background-color val
+			&-home
+				.container-hover
+					background-color val
+
+		.btn
+			color #fff
+			&-down
+				svg
+					path
+						fill val
+			&-menu
+				&.active			
+					.line
+					
+						&:nth-of-type(1),
+						&:nth-of-type(3)
+							background-color val
+			&-submit
+				&:hover
+					color val
+			&-share
+				.fill
+					fill val
+
+		.container
+			&-404
+				h1
+					color #fff !important				
+					strokeText( val )
+					&::before
+						color #fff !important				
+			
+			&-bottom-sheet
+				.btn
+							
+					&-complete
+						background-color val
+						
+						&:hover, &:active
+							background-color #fff
+							color val
+
+				.bs			
+					&-header
+						h2				
+							span
+								bgHighlight(val)
+								
+			&-map
+				background-color lighten(val, 40%)
+
+			&-map-header
+				
+				h1	
+					color #fff	
+					strokeText(  darken(val, 45%) )			
+					&::before
+						color darken(val, 40%)			
+						text-shadow -0.3rem 0.3rem 0px lighten(val, 40%)
+						transitionBase()
+					
+			&-mapa-home
+				h2
+					color #fff
+				
+			&-select-sabor
+				.title
+					background linear-gradient(to bottom, val 18%, lighten(val, 40%) 100%)
+
+		.entry
+			background-color val
+			.btn			
+				&:hover
+					color val
+			&-hover
+				background-color val
+
+		.list-indicator
+			background-color val
+			
+			&::after		
+				background-color val
+				
+
+		.lista-paises
+			background-color darken(val, 40%)
+			ul				
+				li
+
+					a
+						color #fff				
+						&:hover
+							background-color lighten(val, 40%)
+
+		.map	
+			&-region
+				color #fff
+				strokeText(darken(val, 20%))
+				
+				&::before
+					color val
+				
+			&-region-list		
+				
+				li
+					a								
+						span
+							color lighten(val, 40%)
+							
+
+		.map-dir
+			.bs
+				&-content-map
+					
+					.title-content
+						strokeText( darken(val, 40%) )
+						
+						&::before
+							background-color rgba(lighten(val,40%), 0.4)	
+
+				&-header
+					background-color val
+
+		.menu
+			ul
+						
+				li
+					border-color val
+						
+					i				
+						path, circle, polygon
+							fill val
+
+					&:hover
+						background-color lighten(val, 40%)	
+						
+						i
+							path, circle, polygon
+								fill #fff
+								
+					&.active
+						background-color lighten(val, 40%)
+
+						i
+							path, circle, polygon
+								fill #fff
+								
+								
+
+		.sabor
+			h3
+				strokeText(val)
+				
+				&::before
+					color val
+				
+		.select	
+			&-flavor
+				.selected			
+					background-color lighten(val, 40%)
+					
+			&-pais
+				a
+					color #fff
+					
+		.select-sabor
+			h3
+				color #fff
+				
+			.sabor-op
+					
+				.select
+					background-color lighten(val, 40%)
+						
+			.select-content
+				&::-webkit-scrollbar-thumb
+					background-color val
+
+		.share-buttons
+			.social-buttons
+				a
+					background-color val
+					
+		.slick
+			&-next,
+			&-prev
+				color val
+				
+		.slider-sabor-mobile
+			.slick
+				&-next,
+				&-prev
+					color #fff !important
+					
+		.title-blog
+			color #fff
+			strokeText(val)
+			
+			&::before	
+				color val
+		
+		//Responsive modifiers
+		@media (min-width: $screen-sm )
+			header
+				&.home
+					background val
+			.art
+				&-home
+					.container-hover
+						background-color val
+					&:hover
+						.container-hover
+							background-color rgba(val, 0.5)
+			
+			.entry
+
+				.entry-hover
+					background-color val
+					
+				&:hover
+					.entry-hover
+						background-color rgba(val, 0.5)
+	
+	//Suma para la posicion vertical del sprite por cada sabor
+	mult=spriteAlto+pos
+	pos = mult+spriteAlto
+	
+//Colores para componentes que deben tener color propio
+for sabor, val in sabores
+	.sabor-{sabor}
+		background-color val
+		
+		*
+			&::selection /* WebKit/Blink Browsers */
+				background val !important
+
+			&::-moz-selection /* Gecko Browsers */
+				background val !important
+				
+		&.sabor-op
+			background-color transparent !important
+			h4
+				color #fff
+				
+			.indicator
+				.select
+					background-color val !important
+					
+			&:hover, &.active
+				h4
+					color val
+					
+
+		.sabor
+			&-text
+				h3
+					color #fff
+					strokeText(darken(val, 20%))
+	
+.p-404
+	background-color #eff0f0

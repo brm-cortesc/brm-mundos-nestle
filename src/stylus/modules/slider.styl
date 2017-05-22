@@ -1,0 +1,120 @@
+.slider
+	&-sabor-mobile,
+	&-producto-pais
+		text-align center
+		h2, p
+			color #fff !important
+			text-align center
+			
+
+		.producto
+			overflow hidden
+			height 20rem
+			height 42vh
+			max-width 10rem
+			margin 0 auto
+			
+			img
+				img-responsive()
+				display block
+				margin 0 auto 
+				
+		.slide
+			padding 1rem
+			box-shadow 0px 0px 10px 0px rgba(0, 0, 0, .75)
+			
+			transitionBase()
+			&-content
+				margin 0 auto
+				max-width 80%
+				
+			h2
+				font-size 2.5rem
+				margin 1rem auto
+				text-align center
+				// height 4rem
+				
+			p
+				font-size 1.2rem
+				// height 21rem
+				overflow hidden
+				
+			&-text
+				min-height 16rem
+				height 20rem
+				
+	.slick
+		&-active
+			z-index 10
+			
+		&-next,
+		&-prev
+			background none
+			border none
+			color #fff 
+			font-size 0
+			height 3rem
+			overflow hidden
+			position absolute
+			text-align center
+			top 50%
+			width 2.5rem
+			z-index 8
+		
+			&::before
+				position absolute
+				display block
+				text-align center
+				font-family $Icons
+				cuadrado(100%)
+				centrarAb()
+				font-size 2.5rem
+			&:focus, &:active
+				outline none !important
+				
+		&-next
+			right 0.5rem
+			&::before
+				content '\e080'
+				
+		&-prev
+			left 0.5rem
+			&::before
+				content '\e079'
+				
+	&-sabor-mobile
+		.slide
+			cursor pointer
+			
+	&-producto-pais
+		.slide
+			box-shadow none !important
+			
+			h3
+				opacity 0
+				transitionBase()
+				
+
+			.producto
+				filter blur(5px)
+				height 8.8rem
+				transform scale(0.8)
+				transform-origin center bottom
+				transitionBase()
+			
+		.slick
+			&-active
+				&:nth-of-type(even)
+					box-shadow none !important
+				
+			&-current
+				h3
+					opacity 0.99
+					
+				.producto
+					filter blur(0px)
+					transform scale(1)
+
+			&-next,
+			&-prev
+				color $Rojo

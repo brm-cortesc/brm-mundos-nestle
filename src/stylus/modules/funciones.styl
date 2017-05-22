@@ -1,0 +1,51 @@
+//path images
+path(img)
+	background-image url("../images/"+img)
+
+transitionBase(el = all ,tiempo = 0.3s, curve = ease-in-out)
+	transition el tiempo curve
+
+cuadrado()
+	height arguments
+	width arguments
+
+circ()
+	border-radius 100%
+	cuadrado arguments
+
+
+centrarAb()
+	bottom 0
+	left 0
+	margin 0
+	position absolute
+	right 0
+	top 0
+
+//highlight background
+bgHighlight(bgColor = $Rojo)
+	background-color bgColor
+	box-shadow 5px 0 0 bgColor, -5px 0 0 bgColor
+	box-decoration-break clone
+	-webkit-box-decoration-break clone
+	-ms-box-decoration-break clone
+	-o-box-decoration-break clone
+
+
+//Stroke text
+strokeText(sColor = $Rojo)
+	text-shadow -1px -1px 0 sColor,
+				1px -1px 0 sColor,
+				-1px 1px 0 sColor,
+				1px 1px 0 sColor !important
+
+
+//Soporte de propiedad calc en todos los navegadores modernos
+calc()
+	arguments = unquote(arguments)
+	vendor-prefixes = o ms webkit moz
+
+	for pre in vendor-prefixes
+		add-property(current-property[0], s('-%s-calc(%s)', pre, arguments) )
+
+	s('calc(%s)', arguments)

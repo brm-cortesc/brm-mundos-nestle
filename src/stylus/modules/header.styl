@@ -1,0 +1,36 @@
+header
+	background linear-gradient(to bottom, $Rojo 18%, lighten($Rojo, 40%) 100%)
+	color #fff
+	left 0
+	position fixed
+	top 0
+	padding-bottom 1rem
+	padding-top @padding-bottom
+	text-align center
+	transitionBase()
+	z-index 9
+	
+
+	&.affix
+		.col-logo
+			max-width 13rem !important
+			
+		.fhome
+			opacity 0.99 !important
+			pointer-events all !important
+
+	
+		
+	.ornament
+		path('ornamentos/header-ornament.png')
+		background-position center 0%
+		background-repeat no-repeat
+		background-size 100%
+		bottom -2.1rem
+		height 4.5rem
+		pointer-events none
+		position absolute
+		right 23%
+		transitionBase()
+		width 9rem
+		z-index -1

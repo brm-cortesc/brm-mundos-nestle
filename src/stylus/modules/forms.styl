@@ -1,0 +1,29 @@
+.input
+	position relative
+	transitionBase()
+	
+	input, textarea
+		border none
+		color #fff
+		padding 0.5rem
+		transitionBase()
+		width 100%
+		
+	
+	label
+		left 0.5rem
+		margin 0
+		position absolute
+		top 0.5rem
+		transitionBase()
+		z-index 1
+		
+		
+	textarea
+		resize none
+
+	&.active
+		label
+			opacity 0
+			pointer-events none
+	

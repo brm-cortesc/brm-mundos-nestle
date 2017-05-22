@@ -1,0 +1,74 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Home";
+	title NESTLÉ®
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="NESTLÉ®" )
+
+block content
+
+	//Slider
+	div.slider-categorias
+
+		//Intro texto
+		div.slide-intro-txt
+			h2 Lorem
+			+image('logo-nestle.png', 'NESTLÉ®')
+
+			p.
+				Encuentra aquí los mejores productos para nutrir tu vida
+
+		///-Intro texto
+
+
+		//Cafe
+		div.slide-cafe
+			div.slide-categoria
+				h3 Alimentos &amp; bebidas
+
+			//Contenido en Hover
+			div.slide-hover
+				h2 Un café para cualquier momento del día
+
+				div.slide-marcas
+					+image('logos/nescafe.jpg', 'NESCAFÉ®')
+
+			///-Contenido en Hover
+
+			//Imagen seccion
+			+image('categorias/cafe.jpg', 'Un café para cualquier momento del día')(class="img-slide")
+			///-Imagen seccion
+
+
+		///-Cafe
+		
+
+	///-Slider
+
+block brands
+	
+	//Logos
+	div.item.item-logo
+		a(href="#"): +image('logos/milo.jpg', 'MILO®')
+	div.item.item-logo
+		a(href="#"): +image('logos/nescafe.jpg', 'NESCAFÉ®')
+	div.item.item-logo
+		a(href="#"): +image('logos/maggi.jpg', 'MAGGI®')
+	div.item.item-logo
+		a(href="#"): +image('logos/klim.jpg', 'KLIM®')
+	div.item.item-logo
+		a(href="#"): +image('logos/crema-de-leche.jpg', 'CREMA DE LECHE DE NESTLÉ®')
+	div.item.item-logo
+		a(href="#"): +image('logos/la-lechera.jpg', 'LA LECHERA DE NESTLÉ®')
+	div.item.item-logo
+		a(href="#"): +image('logos/purina.jpg', 'PURINA®')
+	div.item.item-logo
+		a(href="#"): +image('logos/nestum.jpg', 'NESTUM®')
+	div.item.item-logo
+		a(href="#"): +image('logos/nestea.jpg', 'NESTEA®')
+	//Logos

@@ -1,0 +1,68 @@
+::-webkit-file-upload-button
+	cursor pointer
+
+a
+	color darken($Rojo, 40%)
+	transitionBase()
+
+	&:hover
+		color darken($Rojo, 80%)
+		text-decoration underline
+
+	img
+		border 0 !important
+
+body
+	background-color #fff
+	color darken($Rojo, 40%)
+	font-family $FontStack
+	font-size 1.4rem
+	font-weight $Light
+	
+	*
+		&::selection /* WebKit/Blink Browsers */
+			background darken($Rojo, 40%)
+			color #fff
+			text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
+
+		&::-moz-selection /* Gecko Browsers */
+			background darken($Rojo, 40%)
+			color #fff
+			text-shadow 0px 0px 5px rgba(255, 255, 255, .75)
+
+
+h1,h2,h3,h4,h5,h6
+	color $Rojo
+	font-family $FontTile
+	font-weight $Bold
+	margin 0.5rem auto
+
+
+input,
+input[type="email"],
+input[type="password"]
+input[type="text"],
+select,
+textarea,
+	background-color transparent
+	border none
+	padding 0.5rem 1rem
+	transitionBase()
+	width 100%
+	
+	&:active
+	&:focus
+		outline none !important
+
+label
+	color $Rojo
+	font-weight $Light
+	margin-bottom 0
+
+select
+	cursor pointer
+	padding 0
+
+p
+	font-size 1.4rem
+	margin 0.5rem auto

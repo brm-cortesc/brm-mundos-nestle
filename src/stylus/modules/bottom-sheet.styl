@@ -1,0 +1,147 @@
+.container-bottom-sheet
+	.btn
+		&-close
+			border none
+			border-radius 100%
+			position absolute
+			right 1rem
+			cuadrado(4.8rem)
+			top @right
+			padding 0
+			
+			img,svg
+				display block
+				cuadrado(100%)
+			
+			&:hover
+				background-color rgba(0,0,0,0.6)
+				
+		&-complete
+			background-color $Rojo
+			border none
+			box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.5)
+			display block
+			max-width 18rem
+			margin 3rem auto
+			color #fff
+			font-size 2rem
+			
+			&:hover, &:active
+				background-color white
+				color $Rojo
+
+	.bs
+		&-content
+			padding 2rem
+			
+			p
+				font-size 1.8rem
+			
+		&-header
+			h2
+				color #fff
+				font-weight $Normal
+				left 2rem
+				line-height 1.2
+				margin 0
+				max-width 60%
+				padding 0.5rem
+				padding-top 0
+				position absolute
+				top 20%
+				// transform translate3d(0,-50%, 0)
+				z-index 1
+				
+				
+				span
+					bgHighlight()
+					
+			img
+				img-responsive()
+				max-width 50%
+				margin-left 50%	
+
+
+	&.active
+		bottom 0
+		opacity 0.99
+
+.map-dir
+	.bs
+		&-content-map			
+			max-height 20rem
+			overflow-y scroll
+			text-align center
+			
+			.title-content
+				color #fff
+				font-size 1.8rem
+				font-weight $Normal
+				max-width 90%
+				position relative
+				strokeText( darken($Rojo, 40%) )
+				
+				&::before
+					background-color rgba(lighten($Rojo,40%), 0.4)
+					bottom 0
+					content ' '
+					height 0.5rem
+					left 0
+					position absolute
+					width 100%
+					z-index 2
+					
+
+		&-header
+			background-color $Rojo
+			color #fff
+			padding 2rem 0
+			
+			h2,h3
+				color #fff
+				
+
+			.btn
+				margin-top -2rem
+
+
+	.pais-name
+		margin auto 
+		max-width 95%
+
+		h2
+			left 0
+			max-width 100%
+			padding-bottom 0
+			position relative
+			text-align left
+			top 0
+		
+		h2, .indicator
+			display inline-block
+			vertical-align middle
+
+		.indicator
+			background-color #fff
+			circ(4.8rem)
+			margin 0 auto
+			position relative
+			
+
+			img
+				margin-left 0
+				img-responsive()
+			
+		.selected
+			circ(4.5rem)
+			left 50%
+			margin auto
+			overflow hidden
+			position absolute
+			top 50%
+			transform translate3d(-50%,-50%,0)
+			
+	.row
+		background-color #fff
+
+	

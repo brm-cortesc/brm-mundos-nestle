@@ -1,0 +1,54 @@
+.btn
+	background-color transparent
+	border 1px solid #fff
+	border-radius 0
+	color #fff
+	line-height 1
+	text-align center
+	text-transform uppercase
+	transitionBase()
+	
+	&-down
+		background-color #fff
+		border none
+		border-radius 0 0 5px 5px
+		box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
+		display block
+		margin auto
+		max-width 6rem
+		padding 0.5rem 0
+		
+		svg
+			display block
+			height auto
+			margin auto
+			width 3.2rem
+		
+	
+	&-float
+		bottom 0.5rem
+		cursor pointer
+		position fixed
+		right @bottom
+		z-index 8
+		
+	&-region
+		&:hover, &.active
+			color black !important
+			background-color #fff
+
+	&-share
+		border none
+		border-radius 100%
+		cursor pointer
+		height auto
+		max-width 7rem
+		
+		svg
+			cuadrado(100%)
+	
+	&-submit
+		&:hover
+			background-color #fff
+			color $Rojo
+		
