@@ -26,26 +26,48 @@ block content
 		///-Intro texto
 
 
-		//Cafe
-		div.slide.slide-cafe
-			div.slide-categoria
-				h3 Alimentos &amp; bebidas
+		div.slider-categorias
+			//Cafe
+			div.slide.slide-cafe
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
 
-			//Contenido en Hover
-			div.slide-hover
-				h2 Un café para cualquier momento del día
+				//Contenido en Hover
+				div.slide-hover
+					h2 Un café para cualquier momento del día
 
-				div.slide-marcas
-					+image('logos/nescafe.jpg', 'NESCAFÉ®')
+					div.slide-marcas
+						+image('logos/nescafe.jpg', 'NESCAFÉ®')(class="img-logo-hover")
 
-			///-Contenido en Hover
+				///-Contenido en Hover
 
-			//Imagen seccion
-			+image('categorias/cafe.jpg', 'Un café para cualquier momento del día')(class="img-slide")
-			///-Imagen seccion
+				//Imagen seccion
+				+image('categorias/cafe.jpg', 'Un café para cualquier momento del día')(class="img-slide")
+				///-Imagen seccion
 
 
-		///-Cafe
+			///-Cafe
+
+			//dolce
+			div.slide.slide-dolce
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Llena tu vida de deliciosos sabores
+
+					div.slide-marcas
+						+image('logos/nescafe.jpg', 'NESCAFÉ®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('categorias/dolce.jpg', 'Llena tu vida de deliciosos sabores')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-dolce
 		
 
 	///-Slider

@@ -1,32 +1,74 @@
 //Carousel//
 .item
-	max-width 6rem
+	// max-width 6rem
+	padding 0 1.5rem
 	
 	img
 		img-responsive(block)
 
+//Carousel
+.slick
+	&-next,
+	&-prev
+		background none
+		border none
+		color #fff
+		font-size 0
+		height 3rem
+		overflow hidden
+		position absolute
+		text-align center
+		top 50%
+		transform translate3d(0,-50%,0)
+		width 2.5rem
+		z-index 8
+	
+		&::before
+			position absolute
+			display block
+			text-align center
+			font-family $Icons
+			cuadrado(100%)
+			centrarAb()
+			font-size 2.5rem
+		&:focus, &:active
+			outline none !important
+			
+	&-next
+		right -2.5rem
+		&::before
+			content '\e080'
+			
+	&-prev
+		left -2.5rem
+		&::before
+			content '\e079'
+
 //slider categorias 
 .slide
-	box-shadow 0px 10px 10px 0 rgba(0,0,0,0.25)
+	box-shadow 0px 5px 5px 0 rgba(0,0,0,0.25)
+	left 0
+	// opacity 0
+	overflow hidden
+	pointer-events none
+	// position absolute
+	top 0
 	transitionBase()
-	position relative
+	width 100%
 	z-index 1
-	
-	&:hover
-		.slider-hover 
-			opacity 0.99
-			pointer-events all
+
 			
 	&-categoria
 		background-color $Azul[1]
+		box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
 		left 1rem
+		max-width 24rem
+		padding 1rem
 		position absolute
+		text-align center
 		text-transform uppercase
 		top 0
-		max-width 24rem
 		z-index 2
-		padding 1rem
-		text-align center
 		
 		h3
 			color #fff
@@ -37,14 +79,33 @@
 		background-color rgba(255,255,255,0.8)
 		opacity 0
 		position absolute
+		pointer-events none
 		text-align center
-		transitionBase()	
+		transitionBase()
+		transform translateY(-2rem)
 		cuadrado(100%)
 		z-index 6
 		
 		&:hover, &.active
 			opacity 0.99
 			pointer-events all
+			transform none
+			
+		.img-logo-hover
+			border-radius 100%
+			display inline-block
+			margin 2rem auto 
+			padding 0
+			box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
+			cuadrado(11.8rem)
+			overflow hidden
+			
+		h2
+			font-size 2.3rem
+			line-height 1
+			margin 3rem auto
+			max-width 35rem
+			text-transform uppercase
 			
 	
 	&-intro-txt
@@ -52,10 +113,16 @@
 		right 9rem
 		text-align center
 		top 2.5rem
+		transitionBase()
 		width 30rem
 		z-index 2
 		
+		&.unactive
+			opacity 0.55
+			pointer-events none
+		
 		h2
+			font-size 3.5rem
 			line-height 1
 			text-transform uppercase
 			
@@ -65,11 +132,23 @@
 			
 		p
 			font-size 1.8rem
+			
+	//Colores
+	for cat, val in categorias
+		&-{cat}
+			.slide-hover
+				h2
+					color val
+		
 
-	&:hover
-		.slider-hover
-			opacity 0.99
-			pointer-events all
+	// &:hover, &.active
+
+	&.active
+		opacity 0.99
+		pointer-events all	
+	
+			
+			
 			
 	.img-slide
 		img-responsive(block)
