@@ -1,0 +1,301 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var titulo = "Recubiertos";
+	title NESTLÉ®
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="NESTLÉ®" )
+
+block content
+
+	//Slider
+	div.container-slider.container-slider-interna
+
+		div.slider-categorias
+			//Cafe
+			div.slide.slide-cafe
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Un café para cualquier momento del día
+
+					div.slide-marcas
+						div.marca
+							+image('logos/nescafe.jpg', 'NESCAFÉ®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('categorias/cafe.jpg', 'Un café para cualquier momento del día')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-Cafe
+
+			//dolce
+			div.slide.slide-dolce
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Llena tu vida de deliciosos sabores
+
+					div.slide-marcas
+						div.marca
+							+image('logos/dolce.jpg', 'NESCAFÉ® Dolce Gusto®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('categorias/dolce.jpg', 'Llena tu vida de deliciosos sabores')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-dolce
+
+			//modificadores
+			div.slide.slide-modificadores
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Dale más sabor y nutrición a tus preparaciones preferidas
+
+					div.slide-marcas
+						div.marca
+							+image('logos/milo.jpg', 'MILO®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/nesquik.jpg', 'NESQUIK®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('categorias/modificadores.jpg', 'Dale más sabor y nutrición a tus preparaciones preferidas')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-modificadores
+
+			//galletas
+			div.slide.slide-galletas
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Combina sabores y compártelos en la mejor compañía
+
+					div.slide-marcas
+						div.marca
+							+image('logos/milo.jpg', 'MILO®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/fitness.jpg', 'FITNESS®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/saltinas.jpg', 'SALTINAS® DE NESTLÉ®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('categorias/galletas.jpg', 'Combina sabores y compártelos en la mejor compañía')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-galletas
+
+			//recubiertos
+			div.slide.slide-recubiertos
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-content
+					div.slide-dummy
+						+image('dummies/recubiertos.png', 'Te mereces una dulce pausa')(class="img-logo-hover")
+
+					h2 Te mereces una dulce pausa
+
+				///-Contenido en Hover
+
+				//- //Contenido en Hover
+				//- div.slide-hover
+				//- 	h2 Te mereces una dulce pausa
+
+				//- 	div.slide-marcas
+				//- 		div.marca
+				//- 			+image('logos/beso-de-negra.jpg', 'BESO DE NEGRA NESTLÉ®')(class="img-logo-hover")
+
+				//- ///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/recubiertos.jpg', 'Te mereces una dulce pausa')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-recubiertos
+		
+			//lacteos
+			div.slide.slide-lacteos
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Una vida más nutritiva y balanceada
+
+					div.slide-marcas
+						div.marca
+							+image('logos/klim.jpg', 'KLIM®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/lacteos.jpg', 'Una vida más nutritiva y balanceada')(class="img-slide")
+				///-Imagen seccion
+
+
+			///-lacteos
+
+			//cereales
+			div.slide.slide-cereales
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Disfruta las mañanas de la forma más sencilla
+
+					div.slide-marcas
+						div.marca
+							+image('logos/fitness.jpg', 'FITNESS®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/cereales.jpg', 'Disfruta las mañanas de la forma más sencilla')(class="img-slide")
+				///-Imagen seccion
+
+			///-cereales
+
+			//culinarios
+			div.slide.slide-culinarios
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Dale más sabor a tus comidas
+
+					div.slide-marcas
+						div.marca
+							+image('logos/maggi.jpg', 'MAGGI®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/crema-de-leche.jpg', 'CREMA DE LECHE® DE NESTLÉ®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/la-lechera.jpg', 'LA LECHERA® DE NESTLÉ®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/culinarios.jpg', 'Dale más sabor a tus comidas')(class="img-slide")
+				///-Imagen seccion
+
+			///-culinarios
+
+			//bebidas
+			div.slide.slide-bebidas
+				div.slide-categoria
+					h3 Alimentos &amp; bebidas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 La opción más saludable para refrescarse
+
+					div.slide-marcas
+						div.marca
+							+image('logos/nestea.jpg', 'NESTEA®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/bebidas.jpg', 'La opción más saludable para refrescarse')(class="img-slide")
+				///-Imagen seccion
+
+			///-bebidas
+
+			//nutricion
+			div.slide.slide-nutricion
+				div.slide-categoria
+					h3 nutrición
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 Nestlé&reg; está a tu lad para cuidar desde el comienzo a los que más quiere
+
+					div.slide-marcas
+						div.marca
+							+image('logos/nestum.jpg', 'NESTUM®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/nutricion.jpg', 'NESTLÉ® está a tu lad para cuidar desde el comienzo a los que más quiere')(class="img-slide")
+				///-Imagen seccion
+
+			///-nutricion
+
+			//mascotas
+			div.slide.slide-mascotas
+				div.slide-categoria
+					h3 mascotas
+
+				//Contenido en Hover
+				div.slide-hover
+					h2 más bienestar para la vida de tus mascotas
+
+					div.slide-marcas
+						div.marca
+							+image('logos/catchow.jpg', 'PURINA® CAT CHOW®')(class="img-logo-hover")
+
+						div.marca
+							+image('logos/dogchow.jpg', 'PURINA® DOG CHOW®')(class="img-logo-hover")
+
+				///-Contenido en Hover
+
+				//Imagen seccion
+				+image('banners/mascotas.jpg', 'más bienestar para la vida de tus mascotas')(class="img-slide")
+				///-Imagen seccion
+
+			///-mascotas
+		
+
+	///-Slider
+
+block brands
+	
+	//Logos
+	div.item.item-logo
+		+image('logos/kitkat.jpg', 'KIT KAT®')(width="80")
+
+	div.item.item-logo
+		+image('logos/beso-de-negra.jpg', 'BESO DE NEGRA DE NESTLÉ®')(width="80")
+	//Logos
+
+block Scripts
+	script.
+		jQuery(document).ready(function(){
+			jQuery('.container-slider.container-slider-interna .slider-categorias').slick( 'slickGoTo', 4 );
+
+		});

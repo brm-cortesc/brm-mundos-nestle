@@ -15,13 +15,24 @@ jQuery(document).ready ->
 		fade: true,
 		autoplaySpeed: 5000
 
-	jQuery('.container-carousel')
-		.slick(marcas)
 
-	jQuery('.container-slider .slider-categorias')
+	interna =
+		arrows:false,
+		slidesToScroll: 1,
+		fade: true
+
+
+	if jQuery('.container-carousel .item').length > 4
+
+		jQuery('.container-carousel')
+			.slick(marcas)
+
+	jQuery('.container-slider.container-slider-home .slider-categorias')
 		.slick(ppal)
 
-	##Hover to show hover ###
+	jQuery('.container-slider.container-slider-interna .slider-categorias')
+		.slick(interna)
+	###to show on hover ###
 
 	jQuery('.menu a')
 		.hover (->
@@ -30,17 +41,16 @@ jQuery(document).ready ->
 			pos = jQuery(@).parent().index()
 
 			### Pausamos rotador ###
-			jQuery('.container-slider .slider-categorias').slick 'slickPause'
+			jQuery('.container-slider.container-slider-home .slider-categorias').slick 'slickPause'
 
-			jQuery('.container-slider .slide-intro-txt').addClass 'unactive'
+			jQuery('.container-slider.container-slider-home .slide-intro-txt').addClass 'unactive'
 			
-			# jQuery('.container-slider .slide-'+categoria).addClass 'active'
 
 			### buscamos slide correspondiente y lo activamos ###
-			jQuery('.container-slider .slider-categorias').slick( 'slickGoTo', pos )
+			jQuery('.container-slider.container-slider-home .slider-categorias').slick( 'slickGoTo', pos )
 			
 			setTimeout () ->
-				jQuery('.container-slider .slide-'+categoria+ ' .slide-hover').addClass 'active'
+				jQuery('.container-slider.container-slider-home  .slide-'+categoria+ ' .slide-hover').addClass 'active'
 				return
 			, 500
 
@@ -48,9 +58,36 @@ jQuery(document).ready ->
 
 		), ->
 			###out###
-			jQuery('.container-slider .slider-categorias').slick 'slickPlay'
-			jQuery('.container-slider .slide-hover').removeClass 'active'
-			jQuery('.container-slider .slide-intro-txt').removeClass 'unactive'
+			jQuery('.container-slider.container-slider-home .slider-categorias').slick 'slickPlay'
+			jQuery('.container-slider.container-slider-home .slide-hover').removeClass 'active'
+			jQuery('.container-slider.container-slider-home .slide-intro-txt').removeClass 'unactive'
+			return
+
+	jQuery('.menu-interna a')
+		.hover (->
+			###enter ###
+			categoria = jQuery(@).attr('data-category')
+			pos = jQuery(@).parent().index()
+
+			jQuery('.container-slider.container-slider-interna  .slide-intro-txt').addClass 'unactive'
+			
+
+			### buscamos slide correspondiente y lo activamos ###
+			jQuery('.container-slider.container-slider-interna  .slider-categorias').slick( 'slickGoTo', pos )
+			
+			setTimeout () ->
+				jQuery('.container-slider.container-slider-interna  .slide-'+categoria+ ' .slide-hover').addClass 'active'
+				return
+			, 500
+
+			return
+
+		), ->
+			###out###
+			current = jQuery('.menu-interna li.active').index()
+			jQuery('.container-slider.container-slider-interna  .slider-categorias').slick( 'slickGoTo', current )
+			jQuery('.container-slider.container-slider-interna  .slide-hover').removeClass 'active'
+			jQuery('.container-slider.container-slider-interna  .slide-intro-txt').removeClass 'unactive'
 			return
 
 

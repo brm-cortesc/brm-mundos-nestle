@@ -1,6 +1,7 @@
 //Carousel//
 .item
-	// max-width 6rem
+	display inline-block
+	max-width 9rem
 	padding 0 1.5rem
 	
 	img
@@ -73,6 +74,33 @@
 		h3
 			color #fff
 			
+	
+	&-content
+		bottom 5.5rem
+		position absolute
+		right 14.3rem
+		text-align center
+		width 34rem
+		z-index 2
+		
+		h2
+			border-top 2px solid transparent
+			font-size 1.8rem
+			line-height 1
+			padding-top 1rem
+			text-transform uppercase
+		
+
+		.slide-dummy
+			max-width 33rem
+			text-align center
+			margin 0 auto
+			
+			img
+				img-responsive()
+				display inline-block
+				
+
 
 
 	&-hover
@@ -91,21 +119,36 @@
 			pointer-events all
 			transform none
 			
-		.img-logo-hover
+		.marca
 			border-radius 100%
 			display inline-block
-			margin 2rem auto 
+			margin 2rem 1rem
 			padding 0
 			box-shadow 0px 0px 5px 0px rgba(0, 0, 0, 0.25)
+			transitionBase()
+			opacity 0
+			transform translateY(-2rem)
 			cuadrado(11.8rem)
 			overflow hidden
+			
+			img
+				img-responsive(block)
 			
 		h2
 			font-size 2.3rem
 			line-height 1
 			margin 3rem auto
-			max-width 35rem
+			max-width 40rem
 			text-transform uppercase
+			
+		&.active
+			.marca
+				opacity 0.99999
+				transform translateY(0)
+				
+				for x in (1..12)
+					&:nth-of-type({x})
+						transition-delay (0.25s*x)
 			
 	
 	&-intro-txt
@@ -118,7 +161,7 @@
 		z-index 2
 		
 		&.unactive
-			opacity 0.55
+			opacity 0.35
 			pointer-events none
 		
 		h2
@@ -136,16 +179,29 @@
 	//Colores
 	for cat, val in categorias
 		&-{cat}
+			.slide-content,
 			.slide-hover
 				h2
 					color val
+					
+			.slide-content
+				
+				h2
+					border-color val
+						
+			if cat == 'nutricion'					
+				.slide-categoria
+					background-color val
+			if cat == 'mascotas'
+				.slide-categoria
+					background-color val
 		
 
 	// &:hover, &.active
 
 	&.active
 		opacity 0.99
-		pointer-events all	
+		pointer-events all
 	
 			
 			

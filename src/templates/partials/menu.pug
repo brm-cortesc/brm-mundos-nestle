@@ -1,11 +1,11 @@
 //Menu
-nav.menu
+nav.menu(class={'menu-interna': titulo != 'Home' })
 	ul
 		li(class={active: titulo == "Cafe"})
 			a(href="cafes.html", data-category="cafe") café
 
-		li(class={active: titulo == "NDC"})
-			a(href="ndc.html", data-category="dolce") nescafé dolce gusto
+		li(class={active: titulo == "Dolce"})
+			a(href="dolce.html", data-category="dolce") nescafé dolce gusto
 	
 
 		li(class={active: titulo == "Modificadores"})
